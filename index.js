@@ -23,7 +23,7 @@ hamburgerMenu.addEventListener('click', (e) => {
   e.stopPropagation();
 });
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keyup', (e) => {
   if (e.key === 'Escape' && hamburgerMenu.classList.contains('show-menu')) {
     if (document.activeElement.tagName.toLowerCase() === 'a') {
       hamburgerBtn.focus();
@@ -34,7 +34,7 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keyup', (e) => {
   if (e.key === 'Escape' && !hamburgerMenu.classList.contains('show-menu')) {
     e.preventDefault();
   }
